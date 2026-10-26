@@ -15,7 +15,7 @@ That one-liner is all most people need. The script in this repo wraps it with ve
 ## TL;DR
 
 ```bash
-git clone https://github.com/<you>/opencode2-install.git
+git clone https://github.com/khnaux/opencode2-install.git
 cd opencode2-install
 
 bash install-opencode2.sh --dry-run   # see the plan

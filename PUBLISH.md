@@ -13,9 +13,8 @@ Two formats work well:
 > - The sdcard mount ignores file modes, so `core.fileMode` is already set to `false`.
 > - The mount is `noexec`: run the installer as `bash install-opencode2.sh`, never `./install-opencode2.sh`.
 
-Nothing here is pushed yet: this machine has no `git` (or `gh`) installed, and pushing needs
-your GitHub credentials. Run the steps below in Termux, or ask me to do it after you have
-authenticated.
+Published at <https://github.com/khnaux/opencode2-install>. The steps below are for
+re-publishing from a fresh clone, moving it to another account, or setting up a second machine.
 
 ---
 
@@ -46,7 +45,7 @@ gh repo create opencode2-install --public --source=. --remote=origin --push
 Without `gh`, create an empty repo at <https://github.com/new>, then:
 
 ```bash
-git remote add origin git@github.com:<you>/opencode2-install.git
+git remote add origin git@github.com:khnaux/opencode2-install.git
 git push -u origin main
 ```
 
