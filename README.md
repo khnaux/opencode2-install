@@ -1,18 +1,23 @@
 # Install OpenCode 2.x (Linux, macOS, Termux)
 
-A tiny, dependency-light installer that always lands on the **latest OpenCode 2.x** — and refuses to install 1.x by accident.
+Installs the **latest OpenCode 2.x** in one command on Linux, macOS or Termux (Android) — and refuses to fall back to 1.x.
 
 Verified against **OpenCode 2.1.4** (October 2026). The version is resolved at run time, so this guide does not go stale with every release.
 
+## Install
+
 ```bash
-curl -fsSL https://opencode.ai/v2/install | bash   # official upstream installer
+curl -fsSL https://raw.githubusercontent.com/khnaux/opencode2-install/main/install-opencode2.sh | bash
 ```
 
-That one-liner is all most people need. The script in this repo wraps it with version pinning, platform detection, Termux support, and a post-install check that the binary really is 2.x.
+Preview the plan first, or pin an exact build:
 
----
+```bash
+curl -fsSL https://raw.githubusercontent.com/khnaux/opencode2-install/main/install-opencode2.sh | bash -s -- --dry-run
+curl -fsSL https://raw.githubusercontent.com/khnaux/opencode2-install/main/install-opencode2.sh | bash -s -- -v 2.1.4
+```
 
-## TL;DR
+Or clone it:
 
 ```bash
 git clone https://github.com/khnaux/opencode2-install.git
@@ -24,6 +29,14 @@ bash install-opencode2.sh -v 2.1.4    # or pin an exact build
 ```
 
 On Android/Termux, always invoke it with `bash`, not `./script` (Android has no `/usr/bin/env`).
+
+Prefer the official upstream installer? It is still the shortest path:
+
+```bash
+curl -fsSL https://opencode.ai/v2/install | bash
+```
+
+This repo wraps that with version pinning, platform detection, Termux support, and a post-install check that the binary really is 2.x.
 
 ---
 
@@ -222,6 +235,7 @@ back them up before deleting anything.
 install-opencode2.sh   installer (bash 3.2+, macOS default bash is fine)
 README.md              this guide
 PUBLISH.md             how to push this to GitHub / publish as a gist
+LICENSE                MIT
 ```
 
 ## Sources
